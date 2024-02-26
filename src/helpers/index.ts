@@ -4,7 +4,7 @@ const SECRET = "myDatabase_RestAPI";
 
 //this function is to ecrpt the password
 export const random = () => {
-  crypto.randomBytes(128).toString("base64");
+  return crypto.randomBytes(128).toString("base64");
 };
 //function to create a sessionToken
 export const authentication = (salt: string, password: string) => {
