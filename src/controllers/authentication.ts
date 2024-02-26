@@ -29,7 +29,7 @@ export const login = async (req: express.Request, res: express.Response) => {
       user._id.toString()
     );
     await user.save();
-    res.cookie("myDatabase_RestAPI", user.authentication.sessionToken, {
+    res.cookie("myDATABASE-AUTH", user.authentication.sessionToken, {
       domain: "localhost",
       path: "/",
     });
